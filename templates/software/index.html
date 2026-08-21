@@ -1,0 +1,94 @@
+{% extends "base.html" %} {% block title %}Software Development — {{
+site.company_name }}{% endblock %} {% block content %}
+<section class="grid-fade">
+  <div class="max-w-6xl mx-auto px-6 pt-20 pb-20 text-center">
+    <p
+      class="uppercase tracking-widest text-sm text-accent2 font-semibold mb-4"
+    >
+      Full-Stack Development &middot; C# / .NET &middot; React &amp; TypeScript
+    </p>
+    <h1
+      class="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-6"
+    >
+      Software, Built to Ship.
+    </h1>
+    <p class="max-w-2xl mx-auto text-lg text-slate-300 mb-10">
+      Simple websites, to Production-grade platforms combining C#, ASP.NET Core,
+      React.js, TypeScript, and Python as needed — with hands-on experience
+      integrating machine learning, event-driven microservices, and Docker
+      infrastructure.
+    </p>
+    <div class="flex flex-wrap items-center justify-center gap-4">
+      <a
+        href="{{ url_for('software_portfolio') }}"
+        class="bg-accent2 hover:bg-indigo-600 transition text-white font-semibold px-6 py-3 rounded-lg"
+        >View Software Portfolio</a
+      >
+      <a
+        href="{{ url_for('contact') }}"
+        class="border border-white/20 hover:border-white/50 transition text-white font-semibold px-6 py-3 rounded-lg"
+        >Contact Us</a
+      >
+    </div>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-6 py-16 border-t border-white/10">
+  <h2 class="text-2xl font-bold text-white mb-10 text-center">
+    Core Capabilities
+  </h2>
+  <div class="grid md:grid-cols-2 gap-8">
+    <div class="card rounded-2xl p-8">
+      <h3 class="text-white font-semibold text-lg mb-2">
+        Full-Stack Web Applications
+      </h3>
+      <p class="text-slate-400 text-sm">
+        C#/ASP.NET Core backends paired with React and TypeScript front ends,
+        built with RESTful API design and modern, component-driven UI.
+      </p>
+    </div>
+    <div class="card rounded-2xl p-8">
+      <h3 class="text-white font-semibold text-lg mb-2">
+        Machine Learning Integration
+      </h3>
+      <p class="text-slate-400 text-sm">
+        Research, prototyping, and production integration of ML models —
+        including WhisperX for automated transcription — with custom performance
+        optimization for near-live workloads.
+      </p>
+    </div>
+    <div class="card rounded-2xl p-8">
+      <h3 class="text-white font-semibold text-lg mb-2">
+        Microservices &amp; Event Streaming
+      </h3>
+      <p class="text-slate-400 text-sm">
+        Docker-containerized services with Kafka event streaming, designed for
+        24/7 data-ingestion workloads and monitored via Grafana dashboards.
+      </p>
+    </div>
+    <div class="card rounded-2xl p-8">
+      <h3 class="text-white font-semibold text-lg mb-2">
+        Workflow Automation &amp; Consulting
+      </h3>
+      <p class="text-slate-400 text-sm">
+        Direct client collaboration to gather requirements, prototype tools, and
+        deliver maintainable software — bridging non-technical stakeholders and
+        production engineering.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section
+  class="max-w-6xl mx-auto px-6 py-16 border-t border-white/10 text-center"
+>
+  <h2 class="text-2xl font-bold text-white mb-4">
+    Have a platform in mind? Let's build it.
+  </h2>
+  <a
+    href="{{ url_for('contact') }}"
+    class="bg-accent2 hover:bg-indigo-600 transition text-white font-semibold px-6 py-3 rounded-lg inline-block"
+    >Get Started</a
+  >
+</section>
+{% endblock %}

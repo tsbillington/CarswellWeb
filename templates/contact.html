@@ -1,0 +1,101 @@
+{% extends "base.html" %} {% block title %}Contact — {{ site.company_name }}{%
+endblock %} {% block content %}
+<section class="max-w-4xl mx-auto px-6 pt-16 pb-24 text-center">
+  <p class="uppercase tracking-widest text-sm text-accent2 font-semibold mb-3">
+    Contact
+  </p>
+  <h1 class="text-4xl font-extrabold text-white mb-6">
+    Let's build something intelligent.
+  </h1>
+  <p class="text-lg text-slate-300 mb-12">
+    Whether it's an XMPie project, a data migration, or a full-stack software
+    platform — we'd love to hear about it.
+  </p>
+
+  <div class="grid md:grid-cols-2 gap-8 text-left">
+    <div class="card rounded-2xl p-10 grid gap-6">
+      <div>
+        <div class="text-slate-500 text-xs uppercase tracking-wide mb-1">
+          Email
+        </div>
+        <a
+          href="mailto:{{ site.email }}"
+          class="text-white text-lg font-medium hover:text-accent transition"
+          >{{ site.email }}</a
+        >
+      </div>
+      <div>
+        <div class="text-slate-500 text-xs uppercase tracking-wide mb-1">
+          Phone
+        </div>
+        <a
+          href="tel:{{ site.phone }}"
+          class="text-white text-lg font-medium hover:text-accent transition"
+          >{{ site.phone }}</a
+        >
+      </div>
+      <div>
+        <div class="text-slate-500 text-xs uppercase tracking-wide mb-1">
+          Location
+        </div>
+        <div class="text-white text-lg font-medium">{{ site.location }}</div>
+      </div>
+      <div>
+        <div class="text-slate-500 text-xs uppercase tracking-wide mb-1">
+          LinkedIn
+        </div>
+        <a
+          href="{{ site.linkedin }}"
+          target="_blank"
+          rel="noopener"
+          class="text-white text-lg font-medium hover:text-accent transition"
+          >ca.linkedin.com/in/timothybillington</a
+        >
+      </div>
+      <a
+        href="mailto:{{ site.email }}?subject=Project%20Inquiry"
+        class="bg-accent hover:bg-red-600 transition text-white font-semibold px-6 py-3 rounded-lg text-center mt-4"
+        >Email Us Now</a
+      >
+    </div>
+
+    <form method="POST" class="card rounded-2xl p-10 grid gap-5">
+      {{ form.hidden_tag() }}
+      <div>
+        {{ form.name.label(class="block text-slate-500 text-xs uppercase
+        tracking-wide mb-2") }} {{ form.name(class="w-full bg-ink border
+        border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-500
+        focus:outline-none focus:border-accent2", placeholder="Jane Doe") }} {%
+        for error in form.name.errors %}
+        <p class="text-accent text-sm mt-1">{{ error }}</p>
+        {% endfor %}
+      </div>
+      <div>
+        {{ form.email.label(class="block text-slate-500 text-xs uppercase
+        tracking-wide mb-2") }} {{ form.email(class="w-full bg-ink border
+        border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-500
+        focus:outline-none focus:border-accent2",
+        placeholder="jane@example.com") }} {% for error in form.email.errors %}
+        <p class="text-accent text-sm mt-1">{{ error }}</p>
+        {% endfor %}
+      </div>
+      <div>
+        {{ form.message.label(class="block text-slate-500 text-xs uppercase
+        tracking-wide mb-2") }} {{ form.message(class="w-full bg-ink border
+        border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-500
+        focus:outline-none focus:border-accent2 min-h-[140px]",
+        placeholder="Tell us about your project...") }} {% for error in
+        form.message.errors %}
+        <p class="text-accent text-sm mt-1">{{ error }}</p>
+        {% endfor %}
+      </div>
+      <button
+        type="submit"
+        class="bg-accent2 hover:bg-indigo-600 transition text-white font-semibold px-6 py-3 rounded-lg"
+      >
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block title %}PressAV Case Study — {{ site.company_name }}{% endblock %}
+
+{% block content %}
+<section class="max-w-5xl mx-auto px-6 pt-16 pb-8">
+  <a href="{{ url_for('software_portfolio') }}" class="text-accent2 text-sm font-semibold hover:underline">&larr; Back to Software Portfolio</a>
+  <p class="uppercase tracking-widest text-sm text-accent2 font-semibold mt-6 mb-3">Software Development &middot; Case Study</p>
+  <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6">PressAV</h1>
+  <p class="max-w-2xl text-lg text-slate-300">A 24/7 data-ingestion and broadcast recording microservices platform, co-built from inception for Fosol Software Solutions Inc.</p>
+</section>
+
+<section class="max-w-5xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8 border-t border-white/10">
+  <div>
+    <div class="text-slate-500 text-xs uppercase tracking-wide mb-1">Role</div>
+    <div class="text-white font-medium">Full-Stack Developer (Contract)</div>
+  </div>
+  <div>
+    <div class="text-slate-500 text-xs uppercase tracking-wide mb-1">Timeline</div>
+    <div class="text-white font-medium">June 2024 &ndash; Present</div>
+  </div>
+  <div>
+    <div class="text-slate-500 text-xs uppercase tracking-wide mb-1">Stack</div>
+    <div class="text-white font-medium">C#, ASP.NET Core, React, TypeScript, Docker, Kafka, WhisperX</div>
+  </div>
+</section>
+
+<section class="max-w-5xl mx-auto px-6 py-10 border-t border-white/10">
+  <h2 class="text-2xl font-bold text-white mb-4">Overview</h2>
+  <p class="text-slate-300 mb-4">
+    PressAV is a broadcast recording and transcription platform that continuously ingests live channel feeds, schedules recordings, and produces searchable transcripts for newsroom and media clients. I joined at inception and contributed across the full stack — backend services, RESTful APIs, container infrastructure, and the React front end.
+  </p>
+  <h3 class="text-xl font-semibold text-white mt-8 mb-3">Machine Learning Integration</h3>
+  <p class="text-slate-300 mb-4">
+    Researched, evaluated, and implemented <span class="text-white font-medium">WhisperX</span> for automated transcription workflows. When requirements shifted toward near-live turnaround, I engineered a custom implementation to meet that performance target without sacrificing transcript accuracy.
+  </p>
+  <h3 class="text-xl font-semibold text-white mt-8 mb-3">Front End</h3>
+  <p class="text-slate-300 mb-4">
+    Built responsive interfaces with React.js, Material UI, and headless component solutions — covering live channel guides, recording schedules (single/repeating/perpetual), and a transcript editor with channel tagging and summary generation.
+  </p>
+  <h3 class="text-xl font-semibold text-white mt-8 mb-3">Backend &amp; Infrastructure</h3>
+  <p class="text-slate-300 mb-4">
+    Designed backend services and RESTful APIs in C# / ASP.NET Core, containerized with Docker, and used Kafka for event streaming across ingestion services. Infrastructure health and performance (CPU, memory, thread counts, .NET GC/managed memory) is monitored via Grafana dashboards.
+  </p>
+</section>
+
+<section class="max-w-5xl mx-auto px-6 py-10 border-t border-white/10">
+  <h2 class="text-2xl font-bold text-white mb-8">Screenshots</h2>
+  <div class="grid md:grid-cols-2 gap-8">
+    <figure>
+      <img class="screenshot w-full" src="{{ url_for('static', filename='images/MicrosoftTeams-image.png') }}" alt="PressAV transcription editor with video player, channel selection, transcript, and summary fields" />
+      <figcaption class="text-slate-500 text-sm mt-3">Transcript editor — channel tagging, transcript text, and summary generation alongside the source recording.</figcaption>
+    </figure>
+    <figure>
+      <img class="screenshot w-full" src="{{ url_for('static', filename='images/MicrosoftTeams-image (5).png') }}" alt="PressAV live channel guide with schedule recording modal" />
+      <figcaption class="text-slate-500 text-sm mt-3">Live channel guide with single, repeating, or perpetual recording scheduling.</figcaption>
+    </figure>
+    <figure>
+      <img class="screenshot w-full" src="{{ url_for('static', filename='images/MicrosoftTeams-image (1).png') }}" alt="PressAV schedule recording modal with weekly and monthly repeat options" />
+      <figcaption class="text-slate-500 text-sm mt-3">Weekly/monthly repeat rules for recurring channel recordings.</figcaption>
+    </figure>
+    <figure>
+      <img class="screenshot w-full" src="{{ url_for('static', filename='images/PressAV-LiveTranscription.png') }}" alt="PressAV live transcription panel showing near-live WhisperX transcript output alongside a video stream" />
+      <figcaption class="text-slate-500 text-sm mt-3">Live transcription — near-live WhisperX transcript output streaming alongside the live video feed.</figcaption>
+    </figure>
+    <figure>
+      <img class="screenshot w-full" src="{{ url_for('static', filename='images/PressAV-FileBrowser.png') }}" alt="PressAV media file browser for selecting recordings to edit" />
+      <figcaption class="text-slate-500 text-sm mt-3">Media file browser — selecting and organizing recordings for editing.</figcaption>
+    </figure>
+    <figure>
+      <img class="screenshot w-full" src="{{ url_for('static', filename='images/PressAV-VideoTrimmer.png') }}" alt="PressAV video trimmer and timeline editor with waveform and transcription panel" />
+      <figcaption class="text-slate-500 text-sm mt-3">Video trimmer — waveform-based timeline editing with segment assembly and transcription metadata.</figcaption>
+    </figure>
+  </div>
+
+  <h3 class="text-xl font-semibold text-white mt-16 mb-6">Live Uptime and Health Monitoring</h3>
+  <div class="grid md:grid-cols-2 gap-8">
+    <figure>
+      <img class="screenshot w-full" src="{{ url_for('static', filename='images/MicrosoftTeams-image (3).png') }}" alt="Grafana dashboard showing all PressAV services health status" />
+      <figcaption class="text-slate-500 text-sm mt-3">Grafana service-health dashboard across capture and API microservices.</figcaption>
+    </figure>
+    <figure>
+      <img class="screenshot w-full" src="{{ url_for('static', filename='images/MicrosoftTeams-image (2).png') }}" alt="Grafana infrastructure overview with CPU, memory, thread count, and .NET GC metrics" />
+      <figcaption class="text-slate-500 text-sm mt-3">Infrastructure overview — CPU/memory usage, thread counts, and .NET garbage collection metrics per service.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="max-w-5xl mx-auto px-6 py-16 border-t border-white/10 text-center">
+  <h2 class="text-2xl font-bold text-white mb-4">Interested in a similar platform for your business?</h2>
+  <a href="{{ url_for('contact') }}" class="bg-accent2 hover:bg-indigo-600 transition text-white font-semibold px-6 py-3 rounded-lg inline-block">Get in Touch</a>
+</section>
+{% endblock %}

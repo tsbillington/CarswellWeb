@@ -1,0 +1,236 @@
+{% extends "base.html" %} {% block title %}Software Portfolio — {{
+site.company_name }}{% endblock %} {% block content %}
+<section class="max-w-6xl mx-auto px-6 pt-16 pb-8">
+  <a
+    href="{{ url_for('software') }}"
+    class="text-accent2 text-sm font-semibold hover:underline"
+    >&larr; Software Development</a
+  >
+  <p
+    class="uppercase tracking-widest text-sm text-accent2 font-semibold mt-6 mb-3"
+  >
+    Portfolio
+  </p>
+  <h1 class="text-4xl font-extrabold text-white mb-4">Software Development</h1>
+</section>
+
+<section class="max-w-6xl mx-auto px-6 py-12 border-t border-white/10">
+  <h2 class="text-2xl font-bold text-white mb-2">AI &amp; Automation</h2>
+  <p class="text-slate-400 mb-8 max-w-2xl">
+    Research, evaluate, and implement machine learning technologies to meet
+    real-world business rules and performance needs.
+  </p>
+  <div class="grid md:grid-cols-2 gap-8 items-start">
+    <figure>
+      <img
+        class="screenshot w-full"
+        src="{{ url_for('static', filename='images/PressAV-LiveTranscription.png') }}"
+        alt="Live transcription panel showing near-live WhisperX transcript output alongside a video stream"
+      />
+      <figcaption class="text-slate-500 text-sm mt-3">
+        Near-live WhisperX transcription streaming alongside a live video feed —
+        <a
+          href="{{ url_for('software_pressav') }}"
+          class="underline hover:text-white"
+          >PressAV case study &rarr;</a
+        >
+      </figcaption>
+    </figure>
+    <div class="card rounded-2xl p-8">
+      <p class="text-slate-300 text-sm">
+        When requirements shifted toward near-live turnaround, I engineered a
+        custom WhisperX implementation to meet that performance target without
+        sacrificing transcript accuracy — a pattern of prototyping and testing
+        new ML tools before moving them into production.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-6 py-12 border-t border-white/10">
+  <h2 class="text-2xl font-bold text-white mb-2">
+    Scheduling &amp; Workflow Systems
+  </h2>
+  <p class="text-slate-400 mb-8 max-w-2xl">
+    Recurring, single-event, and perpetual scheduling engines built for
+    broadcast recording and podcast/content operations.
+  </p>
+  <div class="grid md:grid-cols-2 gap-8">
+    <figure>
+      <img
+        class="screenshot w-full"
+        src="{{ url_for('static', filename='images/MicrosoftTeams-image (5).png') }}"
+        alt="Live channel guide with schedule recording modal"
+      />
+      <figcaption class="text-slate-500 text-sm mt-3">
+        PressAV live channel guide — single, repeating, or perpetual recording
+        scheduling.
+      </figcaption>
+    </figure>
+    <figure>
+      <img
+        class="screenshot w-full"
+        src="{{ url_for('static', filename='images/MicrosoftTeams-image (1).png') }}"
+        alt="Schedule recording modal with weekly and monthly repeat options"
+      />
+      <figcaption class="text-slate-500 text-sm mt-3">
+        PressAV weekly/monthly repeat rules for recurring channel recordings.
+      </figcaption>
+    </figure>
+    <figure>
+      <img
+        class="screenshot w-full"
+        src="{{ url_for('static', filename='images/PodcastSchedule.png') }}"
+        alt="Podcast schedule dashboard showing assigned and unassigned podcaster slots"
+      />
+      <figcaption class="text-slate-500 text-sm mt-3">
+        Podcast schedule management — assigning hosts to weekly slots with
+        draft/review workflow.
+      </figcaption>
+    </figure>
+    <figure>
+      <img
+        class="screenshot w-full"
+        src="{{ url_for('static', filename='images/AvailablitySchedule.png') }}"
+        alt="Yearly availability schedule calendar"
+      />
+      <figcaption class="text-slate-500 text-sm mt-3">
+        Contributor availability calendar — toggling availability across a full
+        year at a glance.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-6 py-12 border-t border-white/10">
+  <h2 class="text-2xl font-bold text-white mb-2">Media &amp; Content Tools</h2>
+  <p class="text-slate-400 mb-8 max-w-2xl">
+    Custom editors and reading experiences built for content-heavy platforms.
+  </p>
+  <div class="grid md:grid-cols-2 gap-8">
+    <figure>
+      <img
+        class="screenshot w-full"
+        src="{{ url_for('static', filename='images/PressAV-VideoTrimmer.png') }}"
+        alt="Video trimmer and timeline editor with waveform and transcription panel"
+      />
+      <figcaption class="text-slate-500 text-sm mt-3">
+        PressAV video trimmer — waveform-based timeline editing with segment
+        assembly.
+      </figcaption>
+    </figure>
+    <figure>
+      <img
+        class="screenshot w-full"
+        src="{{ url_for('static', filename='images/PressAV-FileBrowser.png') }}"
+        alt="Media file browser for selecting recordings to edit"
+      />
+      <figcaption class="text-slate-500 text-sm mt-3">
+        PressAV media file browser — selecting and organizing recordings for
+        editing.
+      </figcaption>
+    </figure>
+    <figure>
+      <img
+        class="screenshot w-full"
+        src="{{ url_for('static', filename='images/BibleReader.png') }}"
+        alt="Bible reader interface with theme, typeface, and text size controls"
+      />
+      <figcaption class="text-slate-500 text-sm mt-3">
+        In-browser Bible reader — configurable theme, typeface, size, and column
+        width.
+      </figcaption>
+    </figure>
+    <figure>
+      <img
+        class="screenshot w-full"
+        src="{{ url_for('static', filename='images/Slideshow.png') }}"
+        alt="Slideshow lightbox component"
+      />
+      <figcaption class="text-slate-500 text-sm mt-3">
+        Embedded slideshow component for article and story galleries.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-6 py-12 border-t border-white/10">
+  <h2 class="text-2xl font-bold text-white mb-2">
+    Subscriber &amp; Communication Tools
+  </h2>
+  <p class="text-slate-400 mb-8 max-w-2xl">
+    Direct-to-subscriber communication tooling built into the content management
+    workflow.
+  </p>
+  <div class="grid md:grid-cols-2 gap-8">
+    <figure>
+      <img
+        class="screenshot w-full"
+        src="{{ url_for('static', filename='images/Newsletter.png') }}"
+        alt="Send episode newsletter confirmation modal"
+      />
+      <figcaption class="text-slate-500 text-sm mt-3">
+        One-click episode newsletter dispatch to confirmed subscribers.
+      </figcaption>
+    </figure>
+    <div class="card rounded-2xl p-8">
+      <p class="text-slate-300 text-sm">
+        Content and subscriber management tools designed so non-technical
+        editors can safely trigger subscriber-facing communication, with
+        confirmation guards built in.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-6 py-12 border-t border-white/10">
+  <h2 class="text-2xl font-bold text-white mb-2">
+    Enterprise Platforms &amp; Infrastructure
+  </h2>
+  <p class="text-slate-400 mb-8 max-w-2xl">
+    Production infrastructure and enterprise application architecture, monitored
+    end-to-end.
+  </p>
+  <div class="grid md:grid-cols-2 gap-8">
+    <figure>
+      <img
+        class="screenshot w-full"
+        src="{{ url_for('static', filename='images/MicrosoftTeams-image (3).png') }}"
+        alt="Grafana dashboard showing all services health status"
+      />
+      <figcaption class="text-slate-500 text-sm mt-3">
+        Grafana service-health dashboard across capture and API microservices —
+        <a
+          href="{{ url_for('software_pressav') }}"
+          class="underline hover:text-white"
+          >PressAV case study &rarr;</a
+        >
+      </figcaption>
+    </figure>
+    <div class="card rounded-2xl p-8">
+      <h3 class="text-lg font-semibold text-white mb-2">
+        Enterprise Application Overhaul
+      </h3>
+      <p class="text-slate-400 text-sm">
+        Architected and deployed a full-stack web application overhaul with a C#
+        backend and a responsive TypeScript, component-driven UI — including a
+        major digital transition for Investors Group as the primary technical
+        interface for non-technical stakeholders.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section
+  class="max-w-6xl mx-auto px-6 py-16 border-t border-white/10 text-center"
+>
+  <h2 class="text-2xl font-bold text-white mb-4">
+    Interested in a similar platform for your business?
+  </h2>
+  <a
+    href="{{ url_for('contact') }}"
+    class="bg-accent2 hover:bg-indigo-600 transition text-white font-semibold px-6 py-3 rounded-lg inline-block"
+    >Get in Touch</a
+  >
+</section>
+{% endblock %}
