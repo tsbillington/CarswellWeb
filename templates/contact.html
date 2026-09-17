@@ -12,53 +12,7 @@ endblock %} {% block content %}
     platform — we'd love to hear about it.
   </p>
 
-  <div class="grid md:grid-cols-2 gap-8 text-left">
-    <div class="card rounded-2xl p-10 grid gap-6">
-      <div>
-        <div class="text-slate-500 text-xs uppercase tracking-wide mb-1">
-          Email
-        </div>
-        <a
-          href="mailto:{{ site.email }}"
-          class="text-white text-lg font-medium hover:text-accent transition"
-          >{{ site.email }}</a
-        >
-      </div>
-      <div>
-        <div class="text-slate-500 text-xs uppercase tracking-wide mb-1">
-          Phone
-        </div>
-        <a
-          href="tel:{{ site.phone }}"
-          class="text-white text-lg font-medium hover:text-accent transition"
-          >{{ site.phone }}</a
-        >
-      </div>
-      <div>
-        <div class="text-slate-500 text-xs uppercase tracking-wide mb-1">
-          Location
-        </div>
-        <div class="text-white text-lg font-medium">{{ site.location }}</div>
-      </div>
-      <div>
-        <div class="text-slate-500 text-xs uppercase tracking-wide mb-1">
-          LinkedIn
-        </div>
-        <a
-          href="{{ site.linkedin }}"
-          target="_blank"
-          rel="noopener"
-          class="text-white text-lg font-medium hover:text-accent transition"
-          >ca.linkedin.com/in/timothybillington</a
-        >
-      </div>
-      <a
-        href="mailto:{{ site.email }}?subject=Project%20Inquiry"
-        class="bg-accent hover:bg-red-600 transition text-white font-semibold px-6 py-3 rounded-lg text-center mt-4"
-        >Email Us Now</a
-      >
-    </div>
-
+  <div class="max-w-xl mx-auto text-left">
     <form method="POST" class="card rounded-2xl p-10 grid gap-5">
       {{ form.hidden_tag() }}
       <div>
