@@ -40,3 +40,8 @@ docker compose up --build
 pip install -r requirements.txt
 flask --app app run
 ```
+
+ssh ubuntu@<public-ip>
+cd CarswellWeb
+git pull
+docker compose up -d --build
